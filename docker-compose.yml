@@ -22,6 +22,8 @@ services:
       - /app/node_modules
       - .:/app
 
-    command: ["npm","run","test"]
-
     
+
+    environment:
+      - CI=true
+    command: npm test -- --coverage

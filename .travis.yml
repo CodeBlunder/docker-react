@@ -1,12 +1,12 @@
-sudo: required
+  sudo: required
 
-services: 
-  - docker
-
-
-before_install:
-  - docker build -t doccudblunder/docker-react -f Dockerfile.dev .
+  services: 
+    - docker
 
 
-script:
-  - docker run doccudblunder/docker-react npm run test -- --coverage
+  before_install:
+    - docker build -t doccudblunder/docker-react -f Dockerfile.dev .
+
+
+  script:
+    - docker run doccudblunder/docker-react npm run test -- --coverage  
